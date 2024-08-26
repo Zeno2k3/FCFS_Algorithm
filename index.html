@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="style/main_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <h2>WEB DESIGNER</h2>
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="FCFS.html" class="menu__link">FCFS</a>
+                </li>
+                <li class="menu__item">
+                    <a href="RR.html" class="menu__link">ROUND ROBIN</a>
+                </li>
+                <li class="menu__item"><a href="SJF.html" class="menu__link">SJF</a></li>
+                <li class="menu__item"><a href="SRTF.html" class="menu__link">SRTF</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="box">
+            <div class="title-bar">
+                <div class="buttons">
+                    <div class="button close"></div>
+                    <div class="button minimize"></div>
+                    <div class="button maximize"></div>
+                </div>
+                <div class="title">Giới thiệu</div>
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="icon-and-text">
+                                <img src="icon/icon1.png" alt="Icon FCFS">
+                                <div class="text">
+                                    <strong>FCFS</strong>
+                                    <p>Nguyên tắc: là một trong những thuật toán lập lịch đơn giản nhất trong hệ thống
+                                        điều hành, các tiến trình được xử lý theo thứ tự chúng đến hàng đợi. Tiến trình
+                                        nào đến trước sẽ được phục vụ trước. Điều này có nghĩa là các tiến trình sẽ được
+                                        xử lý theo thứ tự chúng đến và yêu cầu CPU. Không có sự phân biệt hay ưu tiên
+                                        nào giữa các tiến trình; tiến trình đến đầu tiên sẽ được phục vụ đầu tiên.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="icon-and-text">
+                                <img src="icon/icon2.png" alt="Icon SJF">
+                                <div class="text">
+                                    <strong>SJF</strong>
+                                    <p>Nguyên tắc: Giải thuật SJF (Shortest Remaining Time First) hoạt động bằng cách
+                                        gán cho mỗi tiến trình chiều dài của chu kỳ CPU kế tiếp mà nó sẽ thực hiện. Khi
+                                        CPU trở nên sẵn sàng, nó sẽ được gán cho tiến trình có chu kỳ CPU kế tiếp ngắn
+                                        nhất. Nếu có hai tiến trình có cùng chiều dài chu kỳ CPU kế tiếp, định thời FCFS
+                                        (First-Come, First-Served) sẽ được sử dụng để quyết định tiến trình nào sẽ được
+                                        ưu tiên. Điều quan trọng cần lưu ý là thuật ngữ "chu kỳ CPU kế tiếp ngắn nhất"
+                                        (shortest next CPU burst) vì định thời được thực hiện bằng cách xem xét chiều
+                                        dài của chu kỳ CPU kế tiếp của quá trình hơn là toàn bộ chiều dài của nó.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="icon-and-text">
+                                <img src="icon/icon3.png" alt="Icon SRTF">
+                                <div class="text">
+                                    <strong>SRTF</strong>
+                                    <p>Nguyên tắc: Giải thuật này xử lý tiến trình nào có thời gian thực hiện tại thời
+                                        điểm đó là ngắn nhất. Nói một cách đơn giản, là sau mỗi 1 đơn vị CPU time thì sẽ
+                                        so sánh và chọn ra tiến trình có thời gian thực hiện là ngắn nhất để xử lý
+                                        trước. Trong trường hợp xuất hiện 2 tiến trình trong hàng đợi có thời gian thực
+                                        hiện bằng nhau, tiến trình nào xuất hiện sớm hơn sẽ được xử lý trước.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="icon-and-text">
+                                <img src="icon/icon4.png" alt="Icon RR">
+                                <div class="text">
+                                    <strong>Round Robin</strong>
+                                    <p>Nguyên tắc: Danh sách sẵn sàng được xử lý như một danh sách vòng, bộ điều phối
+                                        lần lượt cấp phát cho từng tiến trình trong danh sách một khoảng thời gian tối
+                                        đa sử dụng CPU cho trước gọi là quantum. Tiến trình đến trước thì được cấp phát
+                                        CPU trước. Đây là một giải thuật điều phối không độc quyền: khi một tiến trình
+                                        sử dụng CPU đến hết thời gian quantum dành cho nó, hệ điều hành thu hồi CPU và
+                                        cấp cho tiến trình kế tiếp trong danh sách. Nếu tiến trình bị khóa hay kết thúc
+                                        trước khi sử dụng hết thời gian quantum, hệ điều hành cũng lập tức cấp phát CPU
+                                        cho tiến trình khác. Khi tiến trình tiêu thụ hết thời gian CPU dành cho nó mà
+                                        chưa hoàn tất, tiến trình được đưa trở lại vào cuối danh sách sẵn sàng để đợi
+                                        được cấp CPU trong lượt kế tiếp.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="icon-and-text">
+                                <img src="icon/icon5.png" alt="Icon FCFS I/O">
+                                <div class="text">
+                                    <strong>FCFS Hiện đại</strong>
+                                    <p>Nguyên tắc: các quá trình được xử lý theo thứ tự đến trước. Khi một quá trình
+                                        được tạo ra, nó được đưa vào cuối hàng đợi sẵn sàng. Nếu CPU đang bận, các quá
+                                        trình mới đến sẽ chờ trong hàng đợi này. Khi CPU trống, nó sẽ lấy quá trình đầu
+                                        tiên trong hàng đợi sẵn sàng để thực thi. Quá trình này sẽ tiếp tục chạy trên
+                                        CPU cho đến khi hoàn thành hoặc yêu cầu I/O. Nếu yêu cầu I/O xảy ra, quá trình
+                                        sẽ chuyển sang trạng thái chờ và được đưa vào hàng đợi I/O. Sau khi hoàn thành
+                                        I/O, quá trình sẽ trở lại hàng đợi sẵn sàng để chờ đến lượt thực thi tiếp theo.
+                                        Quá trình sẽ tiếp tục chạy trên CPU cho đến khi hoàn thành toàn bộ công việc.
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="icon-and-text">
+                                <img src="icon/icon6.png" alt="Icon RR I/O">
+                                <div class="text">
+                                    <strong>Round Robin Hiện đại</strong>
+                                    <p>Nguyên tắc: chia sẻ thời gian bằng cách cấp một khoảng thời gian cố định (time
+                                        quantum) cho mỗi quá trình trong hàng đợi sẵn sàng. Khi một quá trình bắt đầu
+                                        thực thi, nó sẽ chạy cho đến khi hết time quantum hoặc hoàn thành trước thời hạn
+                                        này. Nếu quá trình chưa hoàn thành sau khi time quantum kết thúc, nó sẽ bị ngắt
+                                        và đưa về cuối hàng đợi sẵn sàng, nhường chỗ cho quá trình tiếp theo. Nếu một
+                                        quá trình yêu cầu I/O, nó sẽ chuyển sang trạng thái chờ và sau khi hoàn thành
+                                        I/O, nó sẽ trở lại hàng đợi sẵn sàng. Quá trình này tiếp tục lặp lại cho đến khi
+                                        mọi quá trình đều hoàn thành.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Team</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Nhóm 2 | All Rights Reserved
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

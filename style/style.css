@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Mono', sans-serif;
+    background-image: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    background: #f0f8ff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    max-width: 788px;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.container__function button,
+.container__function a {
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #7128d2;
+    font-family: 'Noto Sans Mono', sans-serif;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: 500;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 688px;
+    margin: auto;
+    text-align: justify;
+}
+
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.container__logo {
+    text-decoration: none;
+}
+
+/* Thuộc Vẽ Draw */
+.gantt-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    padding: auto;
+}
+
+.gantt-table th,
+.gantt-table td {
+    border: 0.5px solid #ddd;
+    padding: 2px;
+    text-align: center;
+}
+
+.gantt-task {
+    background-color: #2ab32e;
+}
+
+.gantt-task-pending {
+    background-color: #acebb6;
+    /* Light gray for pending tasks */
+}
+
+/* Hieu ung btn */
+
+button.container__function-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+button.container__function-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    background: #2b066c;
+    transition: width 0.3s linear;
+}
+
+button.container__function-btn:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+.btn-span {
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROUND ROBIN</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="RR.html" class="container__logo">THUẬT TOÁN RR</a></h1>
+        <div class="container__function">
+            <button class="container__function-btn" onclick="backHome()"><span class="btn-span">TRANG
+                    CHỦ</span></button>
+            <button class="container__function-btn" onclick="addTask()"><span class="btn-span">Thêm
+                    Tiến Trình</span></button>
+            <button class="container__function-btn" onclick="popTask()"><span class="btn-span">Xóa
+                    Tiến Trình</span></button>
+            <button class="container__function-btn" onclick="UpdateTask()"><span class="btn-span">Cập Nhật
+                    Tiến Trình</span> </button>
+            <button class="container__function-btn" onclick="resetPage()"><span class="btn-span">Làm Mới Tất
+                    Cả</span></button>
+            <button class="container__function-btn" onclick="calculateRR()"><span class="btn-span">Bắt
+                    Đầu RR</span></button>
+        </div>
+        <div class="container__fromInput">
+            <div class="form-group">
+                <div class="form-group-row">
+                    <label for="taskID">ID tiến trình:</label>
+                    <input type="text" id="taskID" placeholder="Nhập ID">
+                </div>
+                <div class="form-group-row">
+                    <label for="arrivalTime">Thời gian RL:</label>
+                    <input type="number" id="arrivalTime" required min="0" placeholder="Nhập Thời Gian Đến">
+                </div>
+                <div class="form-group-row">
+                    <label for="burstTime">Thời gian thực thi:</label>
+                    <input type="number" id="burstTime" required min="1" placeholder="Nhập Thời Gian Thực Thi">
+                </div>
+            </div>
+        </div>
+        <div class="container__input">
+            <h2>Danh Sách Tiến Trình</h2>
+            <table class="container__input-taskTable" id="taskTable">
+                <tr>
+                    <th>ID Tiến Trình</th>
+                    <th>Thời Gian Đến</th>
+                    <th>Thời Gian Thực Thi</th>
+                </tr>
+            </table>
+        </div>
+        <div class="container__output">
+            <h2>Bảng Kết Quả</h2>
+            <table class="container__output-resultTable" id="resultTable">
+                <tr>
+                    <th>ID Tiến Trình</th>
+                    <th>Thời Gian Bắt Đầu</th>
+                    <th>Thời Gian Kết Thúc</th>
+                </tr>
+            </table>
+        </div>
+        <h2>GANTT</h2>
+        <div class="gantt-chart" id="gantt-chart"></div>
+        <br>
+        <div class="time-char" id="time-char"></div>
+    </div>
+
+    <script src="js/main_RR.js"></script>
+    <script src="js/reset.js"></script>
+</body>
+
+</html>
