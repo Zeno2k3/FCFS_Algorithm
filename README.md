@@ -1,5 +1,5 @@
 # HĐH
-number01 : https://zeno2k3.github.io/FCFS_Algorithm/index.html
+number01 : https://zeno2k3.github.io/HDH_Algorithm/index.html
 Modeling Algorithms FCFS, Round Robin, SJF, SRTF on the Website with Vietnamese Display Language for students studying operating systems.
 
 ![image](https://github.com/user-attachments/assets/3b384ab3-420d-4c63-b0d1-3bb2e2cc5850)
